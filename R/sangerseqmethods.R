@@ -52,6 +52,7 @@ setMethod("sangerseq", "abif",
       basecalls2_new <- basecalls2_old[basecalls2_old %in% DNA_ALPHABET]
       
       if (length(basecalls2_old) != length(basecalls2_new)) {
+        # NIT: Make error message more specific, especially possible reasons would be useful.
         warning("Invalid characters removed from primary basecalls. This may result
                 in basecalls being shifted. Please check chromatogram.")
       }
